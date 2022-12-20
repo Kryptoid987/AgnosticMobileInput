@@ -1,0 +1,20 @@
+{
+  "name": "com.kkg.agnosticmobileinput",
+  "version": "1.0.0",
+  "displayName": "Agnostic Mobile Input",
+  "description": "Agnostic mobile input system using Unity's new input system that works in editor and on device.",
+  "unity": "2021.3",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.0"
+ },
+ "keywords": [
+    "mobile",
+    "agnostic",
+    "input"
+  ],
+  "author": {
+    "name": "Scott Vander Pryt",
+    "email": "kryptoid98@gmail.com",
+    "url": "https://www.youtube.com/channel/UCqzzogkft4PQc2VUB521vUw"
+  }
+}
