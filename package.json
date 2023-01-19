@@ -1,11 +1,11 @@
 {
   "name": "com.kkg.agnosticmobileinput",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Agnostic Mobile Input",
   "description": "Agnostic mobile input system using Unity's new input system that works in editor and on device.",
   "unity": "2021.3",
   "dependencies": {
-    "com.unity.inputsystem": "1.0.1"
+    "com.unity.inputsystem": "1.0.0"
  },
  "keywords": [
     "mobile",
