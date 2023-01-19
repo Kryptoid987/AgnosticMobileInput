@@ -5,7 +5,7 @@
   "description": "Agnostic mobile input system using Unity's new input system that works in editor and on device.",
   "unity": "2021.3",
   "dependencies": {
-    "com.unity.inputsystem": "1.0.0"
+    "com.unity.inputsystem": "1.0.1"
  },
  "keywords": [
     "mobile",
