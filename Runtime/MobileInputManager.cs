@@ -37,7 +37,7 @@ namespace MobileInput_NewInputSystem
             var touchInput = context.ReadValue<TouchInput>();
             //If this ends up feeling inaccurate, it may have to be down in TouchInputComposite, but this event
             // should be triggered in the same frame, giving the same pointer location data
-            touchInput.IsOverUI = IsPointerOverUIObject();
+            touchInput.IsOverUI = IsPointerOverUIObject(touchInput.Position);
 
             //Set touchID to 0 if its the mouse, can only sim one touch
             if (device is Mouse)
@@ -88,7 +88,7 @@ namespace MobileInput_NewInputSystem
             }
         }
 
-        public bool IsPointerOverUIObject()
+        public bool IsPointerOverUIObject(Vector2 screenPosition)
         {
             if(EventSystem.current == null)
             {
@@ -97,7 +97,7 @@ namespace MobileInput_NewInputSystem
             }
 
             PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-            eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            eventDataCurrentPosition.position = new Vector2(screenPosition.x, screenPosition.y);
             List<RaycastResult> results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
             return results.Count > 0;
